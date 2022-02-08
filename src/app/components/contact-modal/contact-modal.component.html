@@ -1,0 +1,21 @@
+<div class="modal__container">
+  <form class="modal__form">
+    <div class="form-floating mb-3">
+      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+      <label for="floatingInput">Email</label>
+    </div>
+    <div class="form-floating">
+      <textarea class="form-control textarea" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+      <label for="floatingTextarea">Comentario</label>
+    </div>
+    <div class="d-grid gap-2 my-3">
+      <button type="button" 
+              class="btn btn-primary">
+        Enviar</button>
+      <button type="button" 
+              class="btn btn-outline-secondary"
+              (click)="onCloseModal()">
+        Cancelar</button>
+    </div>
+  </form>
+</div>

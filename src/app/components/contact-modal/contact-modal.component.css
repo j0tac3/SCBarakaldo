@@ -1,0 +1,27 @@
+.modal__container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, .8);
+    z-index: 999;
+}
+.modal__form{
+    width: 90%;
+    background-color: #ffff;
+    padding: 1rem;
+    border-radius: 5px;
+}
+.textarea{
+    height: 100px;
+}
+.buttons{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

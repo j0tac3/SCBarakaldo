@@ -1,4 +1,4 @@
 .home{
-    width: 100%;
-    min-height: var(--var--page--hight);
+    width: 100vw;
+    /* min-height: var(--var--page--hight); */
 }

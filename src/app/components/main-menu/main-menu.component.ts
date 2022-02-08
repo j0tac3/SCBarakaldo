@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-main-menu',
@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main-menu.component.css']
 })
 export class MainMenuComponent implements OnInit {
+  @Output() openModal = new EventEmitter<boolean>();
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onOpenModal(){
+    this.openModal.emit(true);
   }
 
 }
