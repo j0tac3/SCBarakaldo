@@ -1,0 +1,31 @@
+.header{
+    height: var(--var--header--hight);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #f5cb00; */
+    background-color: #1f1f1f;
+    color: #f5cb00;
+}
+.header__title{
+    line-height: 50%;
+    width: 5rem;
+}
+.header__logo{
+    width: 100%;
+    max-width: 3rem;
+}
+.header__title::after{
+    content: 'Subbuteo Club Barakaldo';
+    font-size: 0.9rem;
+}
+
+@media screen and (min-width : 750px) {
+    .header__title{
+        width: 10rem;
+    }
+    .header__title::after{
+        content: 'Subbuteo Club Barakaldo';
+    }
+}

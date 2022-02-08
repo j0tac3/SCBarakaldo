@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+.body{
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    width: 100%;
+    max-width: 100vw;
+}
+
+:root{
+    --var--header--hight: 5rem;
+    --var--main--menu--hight: 3rem;
+    --var--page--hight: calc(100vh - (var(--var--header--hight) + var(--var--main--menu--hight)));
+}

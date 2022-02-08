@@ -1,0 +1,56 @@
+.footer{
+    padding: .5rem;
+    background-color: #1f1f1f;
+    color: #f5cb00;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.region{
+    width: 100%;
+    min-width: 5rem;
+    display: grid;
+    text-align: center;
+    font-size: small;
+    margin: 0 1rem;
+}
+.region:not(:last-child){
+    margin-bottom: 1rem;
+}
+.region__title{
+    font-size: .8rem;
+}
+.region__localizacion{
+    color: #f5cc00a8;
+}
+.social{
+    display: flex;
+    justify-content: space-around;
+}
+.social__icon{
+    width: 2rem;
+}
+.social__icon:hover{
+    cursor: pointer;
+}
+.paginas__amigas{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.pagina__enlace{
+    text-decoration: none;
+    color: #f5cc00a8;
+}
+.mapa{
+    width: 100%;
+    height: 15rem;
+}
+@media screen and (min-width : 750px) {
+    .region{
+        width: 12rem;
+    }
+    .mapa{
+        height: 5rem;
+    }
+}
