@@ -8,7 +8,7 @@
 }
 
 :root{
-    --var--header--hight: 5rem;
+    --var--header--hight: 6rem;
     --var--main--menu--hight: 3rem;
     --var--page--hight: calc(100vh - (var(--var--header--hight) + var(--var--main--menu--hight)));
 }

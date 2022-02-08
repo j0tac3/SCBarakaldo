@@ -1,12 +1,19 @@
 .header{
     height: var(--var--header--hight);
     width: 100%;
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
     /* background-color: #f5cb00; */
     background-color: #1f1f1f;
     color: #f5cb00;
+}
+.logo__container{
+    display: flex;
+    justify-content: center;
+}
+.slogan{
+    font-size: .6rem;
 }
 .header__title{
     line-height: 50%;
