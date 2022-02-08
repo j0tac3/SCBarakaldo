@@ -8,6 +8,9 @@
     width: 100%;
     border-bottom: 1px solid #7777;
 }
+.main__menu{
+    width: 100%;
+}
 .footer{
     width: 100%;
     justify-self: flex-end

@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'sc-barakaldo-front';
+  public showModal = false;
+
+
+  onOpenModal(){
+    this.showModal = true;
+  }
+
+  onCloseModal(){
+    this.showModal = false
+  }
 }

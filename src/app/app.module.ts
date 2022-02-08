@@ -10,6 +10,7 @@ import { MainMenuComponent } from './components/main-menu/main-menu.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ContactModalComponent } from './components/contact-modal/contact-modal.component';
 import { NosotrosComponent } from './components/nosotros/nosotros.component';
+import { EventosComponent } from './pages/eventos/eventos.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { NosotrosComponent } from './components/nosotros/nosotros.component';
     MainMenuComponent,
     FooterComponent,
     ContactModalComponent,
-    NosotrosComponent
+    NosotrosComponent,
+    EventosComponent
   ],
   imports: [
     BrowserModule,
