@@ -1,9 +1,9 @@
 <div class="main__container">
     <app-header class="header"></app-header>
-    <router-outlet></router-outlet>
     <app-main-menu class="main__menu"
         (openModal)="onOpenModal()"
     ></app-main-menu>
+    <router-outlet></router-outlet>
     <app-footer class="footer"></app-footer>
 
     <app-contact-modal (closeModal)="onCloseModal()"
