@@ -6,11 +6,13 @@
             <img    src="assets/media/image/icons/home.png" 
                     alt="Inicio" 
                     class="item__icon">
+            <span class="item__title">Inicio</span>
         </li>
         <li class="list__item">
             <img    src="assets/media/image/icons/search.png" 
                     alt="Buscador" 
                     class="item__icon">
+            <span class="item__title">Buscar</span>
         </li>
         <li class="list__item"
             routerLink="eventos"
@@ -18,17 +20,20 @@
             <img    src="assets/media/image/icons/event.png" 
                     alt="" 
                     class="item__icon">
+            <span class="item__title">Eventos</span>
         </li>
-        <li class="list__item">
+        <li class="list__item"
+            (click)="onOpenModal()">
             <img    src="assets/media/image/icons/contact.png" 
                     alt="" 
-                    class="item__icon"
-                    (click)="onOpenModal()">
+                    class="item__icon">
+            <span class="item__title">Contacto</span>
         </li>
         <li class="list__item">
             <img    src="assets/media/image/icons/menu.png"
                     alt="Menu" 
                     class="item__icon">
+            <span class="item__title">Menú</span>
         </li>
     </ul>
 </div>
