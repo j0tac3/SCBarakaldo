@@ -1,12 +1,23 @@
 <div class="modal__container">
-  <form class="modal__form">
+  <form class="modal__form"
+        [formGroup]="formContact">
+    <h2 class="form__title">¿En qué podriamos ayudarte?</h2>
     <div class="form-floating mb-3">
-      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+      <input  type="email" 
+              class="form-control" 
+              id="floatingInput" 
+              placeholder="name@example.com"
+              formControlName="email">
       <label for="floatingInput">Email</label>
+      <div class="form-text">Introduzca su email.</div>
     </div>
     <div class="form-floating">
-      <textarea class="form-control textarea" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+      <textarea class="form-control textarea" 
+                placeholder="Leave a comment here" 
+                id="floatingTextarea"
+                formControlName="message"></textarea>
       <label for="floatingTextarea">Comentario</label>
+      <div class="form-text">Introduzca su consulta.</div>
     </div>
     <div class="d-grid gap-2 my-3">
       <button type="button" 

@@ -11,6 +11,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ContactModalComponent } from './components/contact-modal/contact-modal.component';
 import { NosotrosComponent } from './components/nosotros/nosotros.component';
 import { EventosComponent } from './pages/eventos/eventos.component';
+import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,11 @@ import { EventosComponent } from './pages/eventos/eventos.component';
   ],
   imports: [
     BrowserModule,
-    APP_ROUTING
+    APP_ROUTING,
+    FormBuilder,
+    FormsModule,
+    FormGroup,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

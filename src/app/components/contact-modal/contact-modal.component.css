@@ -16,6 +16,10 @@
     padding: 1rem;
     border-radius: 5px;
 }
+.form__title{
+    color: #777;
+    margin-bottom: 2rem;
+}
 .textarea{
     height: 100px;
 }
