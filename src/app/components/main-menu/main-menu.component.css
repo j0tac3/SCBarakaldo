@@ -29,7 +29,7 @@
 .list__item:hover, .active{
     cursor: default;
 }
-.list__item:hover:not(:active), .active{
+.list__item:hover, .active{
     cursor: pointer;
     filter: invert(.4);
     transform: scale(1.1);

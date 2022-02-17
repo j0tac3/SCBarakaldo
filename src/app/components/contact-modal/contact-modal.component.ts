@@ -1,5 +1,7 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ContactMail } from 'src/app/models/contactMail.model';
+import { SendMessageService } from 'src/app/services/send-message.service';
 
 @Component({
   selector: 'app-contact-modal',
@@ -10,7 +12,8 @@ export class ContactModalComponent implements OnInit {
   @Output() closeModal = new EventEmitter<boolean>();
   public formContact! : FormGroup;
 
-  constructor( private fb : FormBuilder ) { }
+  constructor( private fb : FormBuilder,
+                private sendMassageService : SendMessageService ) { }
 
   ngOnInit(): void {
     this.onInitForm();
@@ -18,9 +21,22 @@ export class ContactModalComponent implements OnInit {
 
   onInitForm() {
     this.formContact = this.fb.group({
-      email : ['', Validators.required],
+      contactMail : ['', Validators.required],
+      subject: ['', Validators.required],
       message : ['', Validators.required]
     });
+  }
+
+  onSendMail(){
+    if (this.formContact.valid ){
+      let messageFromUser = new ContactMail(this.formContact.value);
+      console.log(messageFromUser);
+      this.sendMassageService.sendMessage(messageFromUser)
+      .subscribe( resp => {
+        console.log('ok');
+      }
+      );
+    }
   }
 
   onCloseModal(){

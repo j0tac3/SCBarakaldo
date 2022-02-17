@@ -7,9 +7,18 @@
               class="form-control" 
               id="floatingInput" 
               placeholder="name@example.com"
-              formControlName="email">
+              formControlName="contactMail">
       <label for="floatingInput">Email</label>
       <div class="form-text">Introduzca su email.</div>
+    </div>
+    <div class="form-floating mb-3">
+      <input  type="email" 
+              class="form-control" 
+              id="floatingInput" 
+              placeholder="name@example.com"
+              formControlName="subject">
+      <label for="floatingInput">Asunto</label>
+      <div class="form-text">Introduzca el asunto de su consulta.</div>
     </div>
     <div class="form-floating">
       <textarea class="form-control textarea" 
@@ -21,7 +30,8 @@
     </div>
     <div class="d-grid gap-2 my-3">
       <button type="button" 
-              class="btn btn-primary">
+              class="btn btn-primary"
+              (click)="onSendMail()">
         Enviar</button>
       <button type="button" 
               class="btn btn-outline-secondary"
