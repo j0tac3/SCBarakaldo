@@ -4,11 +4,21 @@
     <h2 class="form__title">¿En qué podriamos ayudarte?</h2>
     <div class="form-floating mb-3">
       <input  type="email" 
+              id="contactMail"
               class="form-control" 
               id="floatingInput" 
               placeholder="name@example.com"
               formControlName="contactMail">
       <label for="floatingInput">Email</label>
+      <div [hidden]="!(contactMail?.invalid && (contactMail?.dirty || contactMail?.touched))"
+            class="alert alert-danger">
+        <div [hidden]="!(contactMail?.errors?.['pattern'])">
+            El formato del correo no es válido.
+          </div>
+        <div [hidden]="!(contactMail?.errors?.['required'])">
+          Es necesario introducir un correo electrónico.
+        </div>
+      </div>
       <div class="form-text">Introduzca su email.</div>
     </div>
     <div class="form-floating mb-3">
@@ -18,6 +28,12 @@
               placeholder="name@example.com"
               formControlName="subject">
       <label for="floatingInput">Asunto</label>
+      <div [hidden]="!(subject?.invalid && (subject?.dirty || subject?.touched))"
+            class="alert alert-danger">
+        <div [hidden]="!(subject?.errors?.['required'])">
+          Es necesario introducir el asunto.
+        </div>
+      </div>
       <div class="form-text">Introduzca el asunto de su consulta.</div>
     </div>
     <div class="form-floating">
@@ -26,14 +42,21 @@
                 id="floatingTextarea"
                 formControlName="message"></textarea>
       <label for="floatingTextarea">Comentario</label>
+      <div [hidden]="!(message?.invalid && (message?.dirty || message?.touched))"
+            class="alert alert-danger">
+        <div [hidden]="!(message?.errors?.['required'])">
+          Es necesario introducir un mensaje.
+        </div>
+      </div>
       <div class="form-text">Introduzca su consulta.</div>
     </div>
     <div class="d-grid gap-2 my-3">
       <button type="button" 
               class="btn btn-primary"
-              (click)="onSendMail()">
+              (click)="onSendMail()"
+              [disabled]="formContact.invalid">
         Enviar</button>
-      <button type="button" 
+      <button type="button"
               class="btn btn-outline-secondary"
               (click)="onCloseModal()">
         Cancelar</button>
