@@ -1,6 +1,6 @@
 .home{
     width: 100vw;
     max-width: 30rem;
-    margin: 3rem 0;
+    margin-bottom: 3rem;
     /* min-height: var(--var--page--hight); */
 }
