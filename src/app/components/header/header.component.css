@@ -12,6 +12,13 @@
     display: flex;
     justify-content: center;
 }
+.logo__enlace{
+    color: #f5cb00;
+    transition: color .3s;
+}
+.logo__enlace:hover{
+    color: #fff;
+}
 .slogan{
     font-size: .6rem;
 }

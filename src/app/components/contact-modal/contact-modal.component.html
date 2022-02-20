@@ -5,11 +5,11 @@
     <div class="form-floating mb-3">
       <input  type="email" 
               id="contactMail"
-              class="form-control" 
+              class="form-control input" 
               id="floatingInput" 
               placeholder="name@example.com"
               formControlName="contactMail">
-      <label for="floatingInput">Email</label>
+      <label for="floatingInput" class="label">Email</label>
       <div [hidden]="!(contactMail?.invalid && (contactMail?.dirty || contactMail?.touched))"
             class="alert alert-danger">
         <div [hidden]="!(contactMail?.errors?.['pattern'])">
@@ -19,36 +19,36 @@
           Es necesario introducir un correo electrónico.
         </div>
       </div>
-      <div class="form-text">Introduzca su email.</div>
+      <!-- <div class="form-text">Introduzca su email.</div> -->
     </div>
     <div class="form-floating mb-3">
       <input  type="email" 
-              class="form-control" 
+              class="form-control input" 
               id="floatingInput" 
               placeholder="name@example.com"
               formControlName="subject">
-      <label for="floatingInput">Asunto</label>
+      <label for="floatingInput" class="label">Asunto</label>
       <div [hidden]="!(subject?.invalid && (subject?.dirty || subject?.touched))"
             class="alert alert-danger">
         <div [hidden]="!(subject?.errors?.['required'])">
           Es necesario introducir el asunto.
         </div>
       </div>
-      <div class="form-text">Introduzca el asunto de su consulta.</div>
+      <!-- <div class="form-text">Introduzca el asunto de su consulta.</div> -->
     </div>
     <div class="form-floating">
-      <textarea class="form-control textarea" 
+      <textarea class="form-control textarea input" 
                 placeholder="Leave a comment here" 
                 id="floatingTextarea"
                 formControlName="message"></textarea>
-      <label for="floatingTextarea">Comentario</label>
+      <label for="floatingTextarea" class="label">Comentario</label>
       <div [hidden]="!(message?.invalid && (message?.dirty || message?.touched))"
             class="alert alert-danger">
         <div [hidden]="!(message?.errors?.['required'])">
           Es necesario introducir un mensaje.
         </div>
       </div>
-      <div class="form-text">Introduzca su consulta.</div>
+      <!-- <div class="form-text">Introduzca su consulta.</div> -->
     </div>
     <div class="d-grid gap-2 my-3">
       <button type="button" 
